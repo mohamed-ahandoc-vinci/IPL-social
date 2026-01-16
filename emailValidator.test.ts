@@ -8,4 +8,8 @@ describe('Email Validation', () => {
     test('should return false if email does not contain @', () => {
         expect(isEmailValid("studentvinci.be")).toBe(false);
     });
+
+    test('should return false if email contains spaces', () => {
+        expect(isEmailValid("student @vinci.be")).toBe(false);
+    });
 });
