@@ -14,6 +14,9 @@ Per the requirements, no external libraries or Regular Expressions (Regex) were 
 3.  **Content:** There must be valid text before and after the `@` separator.
 4.  **Domain:** The domain part must contain a dot (`.`) and cannot end with a dot.
 
+## Continuous Integration (CI)
+The project includes a GitHub Actions pipeline defined in .github/workflows/ci.yml. This pipeline automatically installs dependencies and runs the tests whenever a Pull Request is created against the main branch, ensuring that no broken code is merged.
+
 ## Test Command
 To execute the test suite (Jest), run the following command in the terminal:
 
