@@ -12,4 +12,12 @@ describe('Email Validation', () => {
     test('should return false if email contains spaces', () => {
         expect(isEmailValid("student @vinci.be")).toBe(false);
     });
+
+    test('should return false if text before @ is missing', () => {
+        expect(isEmailValid("@vinci.be")).toBe(false);
+    });
+
+    test('should return false if text after @ is missing', () => {
+        expect(isEmailValid("student@")).toBe(false);
+    });
 });
