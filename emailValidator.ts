@@ -13,5 +13,14 @@ export function isEmailValid(email: string): boolean {
     if (beforePart.length === 0 || afterPart.length === 0) {
         return false;
     }
+
+    if (!afterPart.includes(".")) {
+        return false;
+    }
+
+    if (afterPart.endsWith(".")) {
+        return false;
+    }
+
     return true;
 }
