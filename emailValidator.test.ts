@@ -20,4 +20,12 @@ describe('Email Validation', () => {
     test('should return false if text after @ is missing', () => {
         expect(isEmailValid("student@")).toBe(false);
     });
+
+    test('should return false if domain does not contain a dot', () => {
+        expect(isEmailValid("student@vinci")).toBe(false);
+    });
+
+    test('should return false if dot is the last character', () => {
+        expect(isEmailValid("student@vinci.")).toBe(false);
+    });
 });
